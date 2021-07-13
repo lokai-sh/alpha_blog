@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This project was created as homework for the Udemy course "The complate Ruby on Rails Developer Course" to test ability to:
+* create a Rails 6 project
+* Add a Home Page
+* Add an About page
+* Create a git repository
+* Commit the code to the repository
+* Test and run the rails application to ensure the pages can be viewed
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3.0.0
