@@ -15,6 +15,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   #Create new article
   def create
     #render plain: params[:article] # this will render (display) the value of params specifically returning the article parameter
@@ -30,9 +34,20 @@ class ArticlesController < ApplicationController
       #redirect to now display the new article
       redirect_to article_path(@article)
     else
-      render 'new' #<-- When there are errors we want to re-render the new form and the errors will be displayed
+      render 'new' #If errors re-render to see the errors
     end
 
     #can shorten the above to    redirect_to @article
   end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(params.require(:article).permit(:title, :description)) #update using the values from the form
+      flash[:notice] = "Article was created successfully."
+      redirect_to @article
+    else
+      render 'edit' #If errors re-render the form to see the errros
+    end
+  end
+
 end
