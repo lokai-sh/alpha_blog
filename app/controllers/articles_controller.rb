@@ -26,7 +26,8 @@ class ArticlesController < ApplicationController
     #render plain: params[:article] # this will render (display) the value of params specifically returning the article parameter
     #@article = Article.new(params.require(:article).permit(:title, :description))
     @article = Article.new(article_params)
-    
+    @article = User.first #Temporarily assign a user for now until authentication is done
+
     #render plain: @article #This will display the article object on the screen
     #render plain: @article.inspect #This will display the article object values on the screen
     
